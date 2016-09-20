@@ -1,0 +1,75 @@
+<html ng-app="login">
+    <head>
+        <title>BeeTree : Login</title>
+        <link href="css/style.css" rel="stylesheet" />
+<!--        <link href="css/jquery.contextMenu.css" rel="stylesheet" />-->
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <style>
+            .login_window{
+                width:30%;
+                max-width:400px;
+                min-width:200px;
+                margin:0 auto;
+                border:1px solid #ccc;
+                margin-top:10%;
+            }
+            .login_window .header{
+                height: 70px;
+                text-align: center;
+                font-size:42px;
+            }
+            .login_window ul{
+                list-style: none;
+                padding:0;
+                margin:0;
+            }
+            .login_window ul li{
+                padding: 2px 15px;
+            }
+            .login_window ul li input{
+                padding:2px 10px;
+            }
+            .header small{
+                font-size:11px;
+            }
+        </style>
+    </head>
+    <body ng-controller="form">
+        <div class="login_window">
+            <div class="header">Beetree<small>BETA</small></div>
+            <div>
+                <ul>
+                    <li><input type="text" placeholder="URL" ng-model="url" /></li>
+                    <li><input type="text" placeholder="USERNAME" ng-model="username"/></li>
+                    <li><input type="text" placeholder="PASSWORD" ng-model="password"/></li>
+                    <li><input type="button" value="GO" class="btn btn-blue" ng-click="authenticate()" /></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script src="js/angular.js"></script>
+    <script>
+        var app = angular.module("login",[]);
+        var base_url = 'api/api.php';
+        app.controller("form",function($scope,$http){
+            $scope.password = "";
+            $scope.authenticate = function(){
+                var req = {
+                 method: 'POST',
+                 url: base_url,
+                 headers: {
+                   'Content-Type': 'application/json'
+                 },
+                 data: { method:'setConnection',url: $scope.url,username:$scope.username,password:$scope.password}
+                }
+                $http(req)
+                .then(function(response){
+                        if(response.data == '1')
+                            window.location = 'app.html';
+                        else
+                            alert('Incorrect database settings.')
+                      }); 
+            };
+        });
+    </script>
+</html>
