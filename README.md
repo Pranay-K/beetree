@@ -8,8 +8,7 @@
 * **MySQL** *v5.6.0+*
 
 ## Installation
-Copy it to your web folder and run. For xampp copy it to htdocs folder, for wampp to www folder.
-Basic useful feature list:e
+Copy it to your web folder and run ie. For xampp copy it to htdocs, for wampp to www folder.
 
 ## Browser Support
 ![Firefox](https://cdn3.iconfinder.com/data/icons/browsers-1/512/Browser_B-64.png)
