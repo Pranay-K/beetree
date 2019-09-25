@@ -1,5 +1,5 @@
 # BEETREE
-![](https://img.shields.io/github/repo-size/pranay-k/beetree?color=blue&logo=angular&style=flat-square) ![](https://img.shields.io/github/issues/pranay-k/beetree?style=flat-square) ![](https://img.shields.io/github/license/pranay-k/beetree?color=violet&style=flat-square) ![](https://img.shields.io/github/v/tag/pranay-k/beetree?color=orange&style=flat-square)
+![](https://img.shields.io/github/repo-size/pranay-k/beetree?color=blue&logo=angular&style=flat-square) ![](https://img.shields.io/github/issues/pranay-k/beetree?style=flat-square) ![GitHub](https://img.shields.io/github/license/pranay-k/beetree?color=violet&style=flat-square) ![](https://img.shields.io/github/v/tag/pranay-k/beetree?color=orange&style=flat-square)
 
 
 > A very easy and fast web client for ***MySQL Database Management***
